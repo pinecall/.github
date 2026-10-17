@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/pinecall/pinecall">
-    <img src="assets/banner-4138dfff.svg" alt="Pinecall: voice and chat agents, written as a class" width="100%">
+    <img src="assets/banner-ab4f8b6a.svg" alt="Pinecall: voice and chat agents, written as a class" width="100%">
   </a>
 </p>
 
@@ -28,8 +28,8 @@ at hang-up, the console and the bill. You can write the agent in TypeScript, Pyt
 **Many orgs, one runtime.** Each business is an org with its own people, keys, numbers, quotas and
 data, kept apart down to Postgres row-level security. Each org writes its own agents, and their
 code runs in the org's own process, never inside the runtime, so one fleet of workers serves them
-all. The runtime is open source: run it on your machine with `pinecall-runtime local up`, or use
-Pinecall Cloud.
+all. The runtime is open source: run it on your machine with `pinecall-runtime setup`, which
+asks your email, a password and where the models come from, or use Pinecall Cloud.
 
 ```tsx
 export default class FrontDesk extends Agent {
@@ -45,7 +45,7 @@ export default class FrontDesk extends Agent {
 ```
 
 ```console
-$ pinecall-runtime local up          # the runtime on your machine, or skip it and use Cloud
+$ uv tool install "pinecall-runtime[voice]" && pinecall-runtime setup   # the runtime here, or skip it: Cloud
 $ npm i -g pinecall && pinecall new acme --agent front-desk
 $ pinecall chat                      # talk to it
 $ pinecall test                      # its goldens, judged against a real model
