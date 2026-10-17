@@ -20,17 +20,20 @@
 
 <br>
 
-```text
- ┌─ phone ─┐  ┌─ browser ─┐  ┌─ chat ─┐  ┌─ WhatsApp ─┐
- └────┬────┘  └─────┬─────┘  └───┬────┘  └─────┬──────┘
-      └─────────────┴─────┬──────┴─────────────┘
-                     one agent ── one class ── one log
-```
+<p align="center">
+  <img src="assets/how-it-works.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime; its worker runs speech to text, the model and text to speech, its gateway asks your agent.tsx to run a tool, and every step is an entry in the call's log" width="100%">
+</p>
 
 **You write the agent as a class. Pinecall answers the phone.** The class's fields are the call's
 state, its `@tool` methods are what the model may do, and `render()` is the prompt. Pinecall runs
 the rest: the phone line, the browser call, WhatsApp, speech in and out, memory, retrieval, judges
 at hang-up, the console and the bill. You can write the agent in TypeScript, Python or Ruby.
+
+**Many orgs, one runtime.** Each business is an org with its own people, keys, numbers, quotas and
+data, kept apart down to Postgres row-level security. Each org writes its own agents, and their
+code runs in the org's own process, never inside the runtime, so one fleet of workers serves them
+all. The runtime is open source: run it on your machine with `pinecall-runtime local up`, or use
+Pinecall Cloud.
 
 ```tsx
 export default class FrontDesk extends Agent {
@@ -46,10 +49,11 @@ export default class FrontDesk extends Agent {
 ```
 
 ```console
+$ pinecall-runtime local up          # the runtime on your machine, or skip it and use Cloud
 $ npm i -g pinecall && pinecall new acme --agent front-desk
-$ pinecall chat        # talk to it
-$ pinecall test        # its goldens, judged against a real model
-$ pinecall deploy up   # it answers calls
+$ pinecall chat                      # talk to it
+$ pinecall test                      # its goldens, judged against a real model
+$ pinecall deploy up                 # it answers calls
 ```
 
 <p align="center">
