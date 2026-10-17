@@ -20,13 +20,6 @@
 
 <br>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/how-it-works-dark.png">
-    <img src="assets/how-it-works-light.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime; its worker runs speech to text, the model and text to speech, its gateway asks your agent.tsx to run a tool, and every step is an entry in the call's log" width="100%">
-  </picture>
-</p>
-
 **You write the agent as a class. Pinecall answers the phone.** The class's fields are the call's
 state, its `@tool` methods are what the model may do, and `render()` is the prompt. Pinecall runs
 the rest: the phone line, the browser call, WhatsApp, speech in and out, memory, retrieval, judges
@@ -61,8 +54,8 @@ $ pinecall deploy up                 # it answers calls
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.svg">
-    <img src="assets/architecture-light.svg" alt="How a call moves through Pinecall" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/how-it-works-dark.png">
+    <img src="assets/how-it-works-light.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime. Its worker runs LiveKit's AgentSession, speech to text, the model and text to speech; its gateway asks your agent.tsx to run a tool; every step is an entry in the call's log, kept in Postgres, with Redis as the signal; the console, the CLI and the MCP server read the log live" width="100%">
   </picture>
 </p>
 
