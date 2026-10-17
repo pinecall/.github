@@ -21,7 +21,10 @@
 <br>
 
 <p align="center">
-  <img src="assets/how-it-works.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime; its worker runs speech to text, the model and text to speech, its gateway asks your agent.tsx to run a tool, and every step is an entry in the call's log" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/how-it-works-dark.png">
+    <img src="assets/how-it-works-light.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime; its worker runs speech to text, the model and text to speech, its gateway asks your agent.tsx to run a tool, and every step is an entry in the call's log" width="100%">
+  </picture>
 </p>
 
 **You write the agent as a class. Pinecall answers the phone.** The class's fields are the call's
