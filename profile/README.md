@@ -54,8 +54,8 @@ $ pinecall deploy up                 # it answers calls
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/how-it-works-dark.png">
-    <img src="assets/how-it-works-light.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime. Its worker runs LiveKit's AgentSession, speech to text, the model and text to speech; its gateway asks your agent.tsx to run a tool; every step is an entry in the call's log, kept in Postgres, with Redis as the signal; the console, the CLI and the MCP server read the log live" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/how-it-works-dark-f48f3042.png">
+    <img src="assets/how-it-works-light-4aba1490.png" alt="Phone, browser, chat and WhatsApp reach the Pinecall runtime. Its worker runs LiveKit's AgentSession, speech to text, the model and text to speech; its gateway asks your agent.tsx to run a tool; every step is an entry in the call's log, kept in Postgres, with Redis as the signal; the console, the CLI and the MCP server read the log live" width="100%">
   </picture>
 </p>
 
